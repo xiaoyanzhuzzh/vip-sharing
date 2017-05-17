@@ -1,5 +1,30 @@
+view {
+  margin:5rpx auto;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2px solid #FFCAD4;
+}
+
+.userinfo-nickname {
+  color: #9D8189;
+}
+.vip-infos{
+  margin-top: 50rpx;
+}
+
 .view-item {
-  background-color:#FFF2E2;
+  background-color: #F7EDF0;
 }
 
 .item-category-icon {
