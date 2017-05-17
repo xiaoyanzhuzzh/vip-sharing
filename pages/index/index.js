@@ -3,13 +3,23 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '奔跑吧，我的会员卡',
     userInfo: {}
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  gotoShowPage: function() {
+    wx.navigateTo({
+      url: '../logs/logs',
+    })
+  },
+  gotoAddPage: function() {
+    wx.navigateTo({
+      url: '../logs/logs',
     })
   },
   onLoad: function () {

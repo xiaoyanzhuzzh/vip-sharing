@@ -7,4 +7,8 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view class="navigate">
+    <button bindtap="gotoShowPage" class="show-btn" type="primary">Show</button>
+    <button bindtap="gotoAddPage" class="add-btn">Add</button>
+  </view>
 </view>
