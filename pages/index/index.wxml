@@ -1,14 +1,15 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+  <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{mottoSubtitle}}</text>
   </view>
-  <view class="navigate">
-    <button bindtap="gotoShowPage" class="show-btn" type="primary">Show</button>
-    <button bindtap="gotoAddPage" class="add-btn">Add</button>
+  <view class="buttons">
+    <button class="button" hover-class="other-button-hover" bindtap="addVIPInfo">前往添加VIP信息</button>
+    <button class="button" hover-class="other-button-hover" bindtap="showVIPInfo">查看所有VIP信息</button>
   </view>
 </view>
