@@ -2,7 +2,6 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/show/show",
     "pages/add/add"
   ],
   "window":{

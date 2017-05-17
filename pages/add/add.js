@@ -7,15 +7,38 @@ Page({
       { name: "玩", id: 2 },
       { name: "乐", id: 3 }
     ],
-    category:{name:'吃',id:0}
+    cardInfo: {
+      category: { name: '吃', id: 0 },
+      cardNumber: "",
+      cardName: ""
+    }
+  },
+
+  bindCardNumberInput: function (e) {
+    this.setData({
+      cardInfo: {
+        cardNumber: e.detail.value
+        }
+    })
+  },
+
+  bindCardNameInput: function (e) {
+    this.setData({
+      cardInfo: {
+        cardName: e.detail.value
+      }
+    })
   },
 
   bindChange: function (e) {
     const val = e.detail.value
+
     this.setData({
-      category: this.data.categories[val[0]]
+      cardInfo: {
+        category: this.data.categories[val[0]]
+      }
     })
-    console.log(this.data.category)
+    console.log(this.data.cardInfo.category)
   },
 
   formSubmit: function (e) {
