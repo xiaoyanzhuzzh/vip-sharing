@@ -13,6 +13,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this

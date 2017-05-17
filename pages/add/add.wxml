@@ -1,0 +1,26 @@
+<view class="add-page">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="item-wrapper">
+      <lable>店铺名称</lable>
+      <input name="shopName" class="card-name" placeholder="店铺名称" />
+    </view>
+    <view class="item-wrapper">
+      <view>卡号</view>
+      <input class="card-number" name="vipNumber" placeholder="卡号" value="{{cardNumber}}" />
+    </view>
+    <view class="section">
+
+      <view>类别 {{category.name}}</view>
+      <picker-view name="vipCategory" indicator-style="height: 50px;" class="category" value="{{0}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{categories}}" style="line-height: 50px">{{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+
+    </view>
+    <view class="btn-area">
+      <button class="submit-button" formType="submit" disabled>Submit</button>
+      <button class="cancle-button" formType="reset">Reset</button>
+    </view>
+  </form>
+</view>
