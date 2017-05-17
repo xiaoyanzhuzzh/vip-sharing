@@ -10,7 +10,7 @@
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
-  border: 2px solid #D8E2DC;
+  border: 2px solid #FFCAD4;
 }
 
 .userinfo-nickname {

@@ -1,0 +1,21 @@
+.view-item {
+  background-color:#FFF2E2;
+}
+
+.item-category-icon {
+  width:30px;
+  height:30px;
+  vertical-align: middle;
+}
+
+.item-info {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding:10px;
+  vertical-align: middle;
+  font-size: 11px;
+  width: 132rpx;
+  display: inline-block;
+  color:#330505;
+}
