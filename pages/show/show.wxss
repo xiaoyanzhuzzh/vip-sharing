@@ -13,7 +13,7 @@ view {
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
-  border: 2px solid #FFCAD4;
+  border: 4rpx solid #FFCAD4;
 }
 
 .userinfo-nickname {
@@ -25,11 +25,12 @@ view {
 
 .view-item {
   background-color: #F7EDF0;
+  padding-left:20rpx;
 }
 
 .item-category-icon {
-  width:30px;
-  height:30px;
+  width: 60rpx;
+  height: 60rpx;
   vertical-align: middle;
 }
 
@@ -37,10 +38,10 @@ view {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding:10px;
+  padding: 0 25rpx;
   vertical-align: middle;
-  font-size: 11px;
-  width: 132rpx;
+  font-size: 24rpx;
+  width: 150rpx;
   display: inline-block;
   color:#330505;
 }
