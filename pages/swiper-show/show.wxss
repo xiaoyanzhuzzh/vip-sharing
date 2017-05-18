@@ -1,20 +1,24 @@
+.userinfo {
+  margin: 40rpx auto;
+}
 .categories {
-  height: 36px;
-  width: 750rpx;
-  background-color:#F2FFF9;
-  display: flex;
-  justify-content: space-around;
+  height:36px;
+  width:750rpx;
+  background-color:#F4ACB7;
+  display:flex;
+  justify-content:space-around;
   font-size:30rpx;
+  color:#ffffff;
 }
 .category {
-  width: 180rpx;
+  padding:0 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .category-selected {
-  border-bottom: 2px solid #F4ACB7;
-  color: #F4ACB7;
+  border-bottom: 2px solid #330505;
+  color: #330505;
 }
 .category-item{
   margin: 10rpx 20rpx;
@@ -23,7 +27,8 @@
   text-align: center;
 }
 .vip-infos{
-  margin-top: 50rpx;
+  margin:25px auto;
+  text-align:center;
 }
 .view-item {
   background-color: #F7EDF0;
@@ -42,4 +47,5 @@
   width: 150rpx;
   display: inline-block;
   color:#330505;
+  text-align:left;
 }

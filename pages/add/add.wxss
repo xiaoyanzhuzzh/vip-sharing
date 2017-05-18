@@ -6,7 +6,7 @@
 .section {
   border-bottom: 4rpx solid #ffffff;
   color:#330505;
-  padding: 0 20rpx;
+  padding: 15rpx 20rpx;
   font-size: 30rpx;
 }
 .section-title {
@@ -22,7 +22,7 @@
   text-align:right;
 }
 .title-placeholder {
-  color: #E4E4E4;
+  color: #838384;
 }
 .input-item {
   margin-left: 10px;
@@ -33,7 +33,7 @@
 }
 .btn-area {
   display: flex;
-  margin-top: 15px;
+  margin-top: 80rpx;
 }
 .submit-button {
   background-color: #F4ACB7;
