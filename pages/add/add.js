@@ -8,7 +8,7 @@ Page({
       { name: "美容美发", id: 2 },
       { name: "娱乐", id: 3 },
       { name: "爱车", id: 4 },
-      { name: "其他", id: 5 },
+      { name: "其它", id: 5 },
     ],
     category: { name: "餐饮", id: 0 },
     userInfo: {},
