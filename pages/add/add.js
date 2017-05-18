@@ -77,10 +77,17 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(res.data)
-        wx.navigateTo({
-          url: '../swiper-show/show'
-        })
+        if(res.statusCode == 200){
+          wx.navigateTo({
+            url: '../swiper-show/show'
+          })
+        }else{
+          app.showError('添加失败');
+        }
+      },
+      fail: function (res) {
+       console.log(res)
+       app.showError('添加失败');
       }
     })
   },
