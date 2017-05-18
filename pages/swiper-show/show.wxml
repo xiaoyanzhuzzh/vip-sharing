@@ -5,18 +5,20 @@
     </view>
   </block>
 </view>
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
 <swiper bindchange="bindChange" current='{{selectedCategory}}' style="height:{{swiperHeight}}px">
   <block wx:for="{{categories}}">
     <swiper-item>
       <scroll-view class="vip-infos" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
         <view class="view-item">
-          <image class="item-category-icon"></image>
           <text class="item-info">店名</text>
           <text class="item-info">持卡人</text>
           <text class="item-info">卡号</text>
         </view>
         <view class="view-item" wx:for="{{VIPInfos}}" wx:for-item="VIPInfo"  wx:if="{{item.name == VIPInfo.vipCategory}}">
-        <image class="item-category-icon" src="../../sources/images/{{item.icon}}.png" background-size="cover"></image>
           <text class="item-info">{{VIPInfo.shopName}}</text>
           <text class="item-info">{{VIPInfo.ownerName}}</text>
           <text class="item-info">{{VIPInfo.vipNumber}}</text>

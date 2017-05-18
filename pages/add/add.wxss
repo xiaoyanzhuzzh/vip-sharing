@@ -1,59 +1,47 @@
-/* input.wxss */
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10px;
+.form {
+  display: block;
+  margin:66rpx auto;
+  width:80%;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  border: 4rpx solid #FFCAD4;
+.section {
+  border-bottom: 4rpx solid #ffffff;
+  color:#330505;
+  padding: 0 20rpx;
+  font-size: 30rpx;
 }
-
-.userinfo-nickname {
-  color: #9D8189;
-  font-size: 40rpx;
+.section-title {
+  display:inline-block;
+  vertical-align:middle;
+  width: 40%;
+  text-align:left;
 }
-
+.section-content {
+  display:inline-block;
+  vertical-align:middle;
+  width: 60%;
+  text-align:right;
+}
+.title-placeholder {
+  color: #E4E4E4;
+}
 .input-item {
   margin-left: 10px;
   overflow: visible
 }
-
 .picker {
   margin-top: 10px;
 }
-
-.add-page {
-  padding: 20px 20px;
-}
-
-.item-wrapper {
-  margin-top: 15px;
-  padding: 2px;
-  border: 1px solid gray;
-  border-radius: 4px;
-}
-
-.input-item-container {
-  display: inline-block;
-}
-
 .btn-area {
   display: flex;
   margin-top: 15px;
 }
-
 .submit-button {
-  background-color: #9d8189;
+  background-color: #F4ACB7;
+  color: #ffffff;
   width: 100%;
   font-size: 30rpx;
+  margin: 20rpx auto;
 }
-
 .category {
   width: 100%;
   height:1.4rem;

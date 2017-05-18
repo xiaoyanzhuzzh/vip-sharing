@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     categories: [
@@ -27,32 +28,9 @@ Page({
       },
     ],
     VIPInfos: [
-      {
-        shopName: "Vero Moda",
-        ownerName: "Zhihui.Zhang",
-        vipNumber: "1234567890",
-        vipCategory: "服饰类",
-      },
-      {
-        shopName: "屈臣氏",
-        ownerName: "Min.Li",
-        vipNumber: "12345678900",
-        vipCategory: "化妆品",
-      },
-      {
-        shopName: "大厨小馆",
-        ownerName: "Min.Li",
-        vipNumber: "12345678900",
-        vipCategory: "餐饮",
-      },
-      {
-        shopName: "滚石",
-        ownerName: "Min.Li",
-        vipNumber: "12345678900",
-        vipCategory: "娱乐",
-      }
     ],
     selectedCategory: "0",
+    userInfo: {}
   },
   bindtap: function (e) {
     console.log(e)
@@ -72,6 +50,29 @@ Page({
         that.setData({
           swiperHeight: (res.windowHeight - 37)
         });
+      }
+    })
+  },
+  onLoad: function () {
+    console.log('onLoad')
+    var that = this
+    app.getUserInfo(function (userInfo) {
+      that.setData({
+        userInfo: userInfo
+      })
+    });
+    wx.request({
+      url: 'http://localhost:8080/vipinfos',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (resp) {
+        console.log('---------------')
+        console.log(resp)
+        that.setData({
+          VIPInfos: resp.data
+        })
       }
     })
   }
