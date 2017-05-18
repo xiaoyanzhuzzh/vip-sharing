@@ -1,26 +1,33 @@
 <view class="add-page">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="item-wrapper">
-      <lable>店铺名称</lable>
+     <span>店铺名称</span>
+     <div>
       <input bindinput="bindCardNameInput" name="shopName" class="card-name" placeholder="店铺名称" />
+      </div>
     </view>
     <view class="item-wrapper">
-      <view>卡号</view>
+      <input bindinput="bindUserNameInput" name="userName" class="card-name" placeholder="姓名" />
+    </view>
+    <view class="item-wrapper">
       <input bindinput="bindCardNumberInput" class="card-number" name="vipNumber" placeholder="卡号" value="{{cardNumber}}" />
     </view>
     <view class="section">
-
-      <view>类别 {{cardInfo.category.name}}</view>
-      <picker-view name="vipCategory" indicator-style="height: 50px;" class="category" value="{{0}}" bindchange="bindChange">
-        <picker-view-column>
-          <view wx:for="{{categories}}" style="line-height: 50px">{{item.name}}</view>
-        </picker-view-column>
-      </picker-view>
+    <view class = "item-wrapper">
+  <picker name="vipCategory" bindchange="bindPickerChange" value="{{index}}" range="{{categories}}" range-key="name">
+    <view class="category">
+     类别: {{categories[index].name}}
+    </view>
+  </picker>
+   </view>
 
     </view>
     <view class="btn-area">
-      <button class="submit-button" formType="submit" disabled="{{(cardInfo.cardNumber==''&&cardInfo.cardName=='')}}">Submit</button>
-      <button class="cancle-button" formType="reset">Reset</button>
+      <button class="submit-button" formType="submit">添加</button>
     </view>
   </form>
 </view>
