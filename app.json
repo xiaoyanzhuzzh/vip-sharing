@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/add/add",
-    "pages/show/show"
+    "pages/swiper-show/show"
   ],
   "window":{
     "backgroundTextStyle":"light",
