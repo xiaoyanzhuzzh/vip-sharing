@@ -17,12 +17,12 @@
           <view class="view-item">
             <text class="item-info">店名</text>
             <text class="item-info">持卡人</text>
-            <text class="item-info">卡号</text>
+            <text class="item-info item-number-info">卡号</text>
           </view>
           <view class="view-item" wx:for="{{VIPInfos}}" wx:for-item="VIPInfo"  wx:if="{{item.name == VIPInfo.vipCategory}}">
             <text class="item-info">{{VIPInfo.shopName}}</text>
             <text class="item-info">{{VIPInfo.ownerName}}</text>
-            <text class="item-info">{{VIPInfo.vipNumber}}</text>
+            <text class="item-info item-number-info">{{VIPInfo.vipNumber}}</text>
           </view>
         </scroll-view>
       </swiper-item>
