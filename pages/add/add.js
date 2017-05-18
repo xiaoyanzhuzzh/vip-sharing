@@ -8,8 +8,10 @@ Page({
       { name: "玩", id: 2 },
       { name: "乐", id: 3 }
     ],
-    category:{name:"吃",id:0},
-    userInfo: {}
+    category: { name: "吃", id: 0 },
+    userInfo: {},
+    isFocus: [false, false, false],
+    index:0
   },
 
   onLoad: function () {
@@ -37,7 +39,39 @@ Page({
 
   formSubmit: function (e) {
     const result = e.detail.value
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    if (e.detail.value.shopName == '') {
+      this.setData({
+        isFocus: [true, false, false]
+      }
+      )
+      return
+    }
+    if (e.detail.value.ownerName == '') {
+      this.setData({
+        isFocus: [false, true, false]
+      }
+      )
+      return
+    }
+    if (e.detail.value.vipNumber == '') {
+      this.setData({
+        isFocus: [false, false, true]
+      }
+      )
+      return
+    }
+    console.log('form发生了submit事件，携带数据为：', result)
+    wx.request({
+      method: "POST",
+      url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
+      data: result,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
   },
 
   bindPickerChange: function (e) {
@@ -46,8 +80,4 @@ Page({
       index: e.detail.value
     })
   },
-
-  formReset: function () {
-    console.log('form发生了reset事件')
-  }
 })
