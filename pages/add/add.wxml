@@ -5,27 +5,39 @@
   </view>
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="item-wrapper">
-     <span>店铺名称</span>
-     <div>
-      <input bindinput="bindCardNameInput" name="shopName" class="card-name" placeholder="店铺名称" />
-      </div>
+      <view class="input-item-container">
+        <label>店铺名称</label>
+      </view>
+      <view class="input-item-container">
+        <input bindinput="bindCardNameInput" class="input-item" name="shopName" placeholder="请输入会员卡的店铺名称" />
+      </view>
     </view>
     <view class="item-wrapper">
-      <input bindinput="bindUserNameInput" name="userName" class="card-name" placeholder="姓名" />
+      <view class="input-item-container">
+        <label>会员姓名</label>
+      </view>
+      <view class="input-item-container">
+        <input bindinput="bindUserNameInput" name="userName" class="input-item" placeholder="请输入会员姓名" />
+      </view>
     </view>
     <view class="item-wrapper">
-      <input bindinput="bindCardNumberInput" class="card-number" name="vipNumber" placeholder="卡号" value="{{cardNumber}}" />
-    </view>
-    <view class="section">
-    <view class = "item-wrapper">
-  <picker name="vipCategory" bindchange="bindPickerChange" value="{{index}}" range="{{categories}}" range-key="name">
-    <view class="category">
-     类别: {{categories[index].name}}
-    </view>
-  </picker>
-   </view>
+      <view class="input-item-container">
+        <label>会员卡号</label>
+      </view>
+      <view class="input-item-container">
+        <input bindinput="bindCardNumberInput" class="input-item" name="vipNumber" placeholder="请输入卡号" value="{{cardNumber}}" />
+      </view>
 
     </view>
+    <view class="item-wrapper">
+      <picker name="vipCategory" bindchange="bindPickerChange" value="{{index}}" range="{{categories}}" range-key="name">
+        <view class="category">
+          <label>类别:</label>
+           {{categories[index].name}}
+        </view>
+      </picker>
+    </view>
+
     <view class="btn-area">
       <button class="submit-button" formType="submit">添加</button>
     </view>
