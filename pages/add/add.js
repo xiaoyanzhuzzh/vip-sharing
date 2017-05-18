@@ -3,12 +3,14 @@ var app = getApp()
 Page({
   data: {
     categories: [
-      { name: "吃", id: 0 },
-      { name: "喝", id: 1 },
-      { name: "玩", id: 2 },
-      { name: "乐", id: 3 }
+      { name: "餐饮", id: 0 },
+      { name: "服饰", id: 1 },
+      { name: "美容美发", id: 2 },
+      { name: "娱乐", id: 3 },
+      { name: "爱车", id: 4 },
+      { name: "其他", id: 5 },
     ],
-    category: { name: "吃", id: 0 },
+    category: { name: "餐饮", id: 0 },
     userInfo: {},
     isFocus: [false, false, false],
     index:0
@@ -62,14 +64,23 @@ Page({
     }
     console.log('form发生了submit事件，携带数据为：', result)
     wx.request({
-      method: "POST",
+      method: 'POST',
       url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
-      data: result,
+      data: {
+        wechatID:'',
+        shopName:result.shopName,
+        ownerName:result.ownerName,
+        vipNumber:result.vipNumber,
+        vipCategory: this.data.categories[result.vipCategory].name
+      },
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
         console.log(res.data)
+        wx.navigateTo({
+          url: '../swiper-show/show'
+        })
       }
     })
   },
