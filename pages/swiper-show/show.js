@@ -3,16 +3,16 @@ Page({
   data: {
     categories: [
       {
-        name: '服饰类',
+        name: '餐饮',
+        icon: 'food'
+      },
+      {
+        name: '服饰',
         icon: 'clothes'
       },
       {
-        name: '化妆品',
+        name: '美容美发',
         icon: 'haircut'
-      },
-      {
-        name: '餐饮',
-        icon: 'food'
       },
       {
         name: '娱乐',
@@ -28,6 +28,12 @@ Page({
       },
     ],
     VIPInfos: [
+      {
+        wechatID: "hello",
+        shopName: "大小",
+        ownerName: "kaichao2",
+        vipNumber: "121212",
+        vipCategory: "餐饮"}
     ],
     selectedCategory: "0",
     userInfo: {}
@@ -61,19 +67,17 @@ Page({
         userInfo: userInfo
       })
     });
-    wx.request({
-      url: 'http://localhost:8080/vipinfos',
-      method: 'GET',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (resp) {
-        console.log('---------------')
-        console.log(resp)
-        that.setData({
-          VIPInfos: resp.data
-        })
-      }
-    })
+    // wx.request({
+    //   url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
+    //   method: 'GET',
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (resp) {
+    //     that.setData({
+    //       VIPInfos: resp.data
+    //     })
+    //   }
+    // })
   }
 })
