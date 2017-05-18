@@ -13,7 +13,8 @@ Page({
     category: { name: "餐饮", id: 0 },
     userInfo: {},
     isFocus: [false, false, false],
-    index:0
+    index:0,
+    canSubmit:true
   },
 
   onLoad: function () {
@@ -28,6 +29,12 @@ Page({
     })
   },
 
+  onShow: function (){
+    this.setData({
+      canSubmit:true
+    })
+  },
+
   bindChange: function (e) {
     const val = e.detail.value
 
@@ -38,6 +45,13 @@ Page({
     })
     console.log(this.data.cardInfo.category)
   },
+
+ handleError: function(e) {
+   app.showError('添加失败');
+   this.setData({
+     canSubmit: true
+   })
+ },
 
   formSubmit: function (e) {
     const result = e.detail.value
@@ -63,6 +77,10 @@ Page({
       return
     }
     console.log('form发生了submit事件，携带数据为：', result)
+    this.setData({
+      canSubmit:false
+    })
+    var that = this;
     wx.request({
       method: 'POST',
       url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
@@ -82,12 +100,11 @@ Page({
             url: '../swiper-show/show'
           })
         }else{
-          app.showError('添加失败');
+          that.handleError(res);
         }
       },
       fail: function (res) {
-       console.log(res)
-       app.showError('添加失败');
+       that.handleError(res);
       }
     })
   },

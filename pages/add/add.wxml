@@ -31,7 +31,7 @@
       </view>
     </view>
     <view class="btn-area">
-      <button class="submit-button" formType="submit">添加</button>
+      <button disabled="{{!canSubmit}}" class="submit-button" formType="submit">添加</button>
     </view>
   </form>
 </view>
