@@ -7,13 +7,13 @@
     <view class="section">
       <view class="section-title">店名</view>
       <view class="section-content">
-          <input focus="{{isFocus[0]}}" placeholder="大厨小馆" placeholder-class="title-placeholder" name="shopName"/>
+          <input focus="{{isFocus[0]}}" placeholder="xxx" placeholder-class="title-placeholder" name="shopName"/>
       </view>
     </view>
     <view class="section">
       <view class="section-title">持卡人</view>
       <view class="section-content">
-          <input focus="{{isFocus[1]}}" placeholder="慧小志" placeholder-class="title-placeholder" name="ownerName"/>
+          <input focus="{{isFocus[1]}}" placeholder="张三" placeholder-class="title-placeholder" name="ownerName"/>
       </view>
     </view>
     <view class="section">
