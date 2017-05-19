@@ -12,7 +12,7 @@
 
 .buttons {
   width: 100%;
-  margin: 100rpx auto 0;
+  margin: 100rpx auto 50rpx;
 }
 
 .button {
@@ -21,4 +21,10 @@
   width: 80%;
   font-size: 30rpx;
   margin: 20rpx auto;
+}
+.tip {
+  margin: 40rpx;
+  font-size: 20rpx;
+  color: #838384;
+  line-height: 1.5;
 }
