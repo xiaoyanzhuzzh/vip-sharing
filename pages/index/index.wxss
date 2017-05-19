@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-size: 28rpx;
   padding: 10rpx;
+  color: #330505
 }
 
 .user-motto {
@@ -20,6 +21,7 @@
   color: #ffffff;
   width: 80%;
   font-size: 30rpx;
+  font-weight: bold;
   margin: 20rpx auto;
 }
 .tip {
