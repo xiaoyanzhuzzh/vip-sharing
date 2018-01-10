@@ -1,6 +1,6 @@
 <view class="show-page">
   <view class="categories">
-    <block wx:for="{{categories}}" wx:for-item="category">
+    <block wx:key="{{index}}" wx:for="{{categories}}" wx:for-item="category">
       <view id="{{index}}" bindtap="bindtap" class="category {{index==selectedCategory ? 'category-selected' : ''}}">
         {{category.name}}
       </view>
@@ -11,7 +11,7 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <swiper bindchange="bindChange" current='{{selectedCategory}}' style="height:{{swiperHeight}}px">
-    <block wx:for="{{categories}}">
+    <block wx:key="{{index}}" wx:for="{{categories}}">
       <swiper-item>
         <scroll-view class="vip-infos" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
           <view class="view-item">
@@ -19,7 +19,7 @@
             <text class="item-info">持卡人</text>
             <text class="item-info item-number-info">卡号</text>
           </view>
-          <view class="view-item" wx:for="{{VIPInfos}}" wx:for-item="VIPInfo"  wx:if="{{item.name == VIPInfo.vipCategory}}">
+          <view class="view-item" wx:key="{{index}}" wx:for="{{VIPInfos}}" wx:for-item="VIPInfo"  wx:if="{{item.name == VIPInfo.vipCategory}}">
             <text class="item-info">{{VIPInfo.shopName}}</text>
             <text class="item-info">{{VIPInfo.ownerName}}</text>
             <text class="item-info item-number-info">{{VIPInfo.vipNumber}}</text>

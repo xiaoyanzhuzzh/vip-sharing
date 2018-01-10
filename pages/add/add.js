@@ -1,4 +1,5 @@
 // input.js
+const AV = require('../../lib/av-weapp-min.js');
 var app = getApp()
 Page({
   data: {
@@ -46,12 +47,12 @@ Page({
     console.log(this.data.cardInfo.category)
   },
 
- handleError: function(e) {
-   app.showError('添加失败');
-   this.setData({
-     canSubmit: true
-   })
- },
+  handleError: function(e) {
+    app.showError('添加失败');
+    this.setData({
+      canSubmit: true
+    })
+  },
 
   formSubmit: function (e) {
     const result = e.detail.value
@@ -60,53 +61,42 @@ Page({
         isFocus: [true, false, false]
       }
       )
-      return
+      return;
     }
     if (e.detail.value.ownerName == '') {
       this.setData({
         isFocus: [false, true, false]
       }
       )
-      return
+      return;
     }
     if (e.detail.value.vipNumber == '') {
       this.setData({
         isFocus: [false, false, true]
       }
       )
-      return
+      return;
     }
     console.log('form发生了submit事件，携带数据为：', result)
     this.setData({
       canSubmit:false
-    })
+    });
     var that = this;
-    wx.request({
-      method: 'POST',
-      url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
-      data: {
-        wechatID:'',
-        shopName:result.shopName,
-        ownerName:result.ownerName,
-        vipNumber:result.vipNumber,
-        vipCategory: this.data.categories[result.vipCategory].name
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success: function (res) {
-        if(res.statusCode == 200){
-          wx.navigateTo({
-            url: '../swiper-show/show'
-          })
-        }else{
-          that.handleError(res);
-        }
-      },
-      fail: function (res) {
-       that.handleError(res);
-      }
-    })
+    var Membership = AV.Object.extend('Membership');
+    var membershipData = new Membership();
+    membershipData.set('wechatID', '');
+    membershipData.set('shopName', result.shopName);
+    membershipData.set('ownerName', result.ownerName);
+    membershipData.set('vipNumber', result.vipNumber);
+    membershipData.set('vipCategory', this.data.categories[result.vipCategory].name);
+    membershipData.save().then(function (data) {
+      that.setData({
+        canSubmit: true
+      });
+      console.log('成功');
+    }, function (error) {
+      console.log('失败');
+    });
   },
 
   bindPickerChange: function (e) {

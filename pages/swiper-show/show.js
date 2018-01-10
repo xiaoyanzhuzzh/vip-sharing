@@ -1,3 +1,5 @@
+// show.js
+const AV = require('../../lib/av-weapp-min.js');
 var app = getApp();
 Page({
   data: {
@@ -60,17 +62,12 @@ Page({
         userInfo: userInfo
       })
     });
-    wx.request({
-      url: 'https://reaio-membership.resi-product-staging.realestate.com.au/vip',
-      method: 'GET',
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (resp) {
-        that.setData({
-          VIPInfos: resp.data
-        })
-      }
-    })
+
+    var membershipQuery = new AV.Query('Membership');
+    membershipQuery.find().then(function (data) {
+      that.setData({
+        VIPInfos: data
+      });
+    });
   }
 })
