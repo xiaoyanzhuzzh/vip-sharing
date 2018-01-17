@@ -24,5 +24,11 @@ Page({
     wx.navigateTo({
       url: '../swiper-show/show'
     })
+  },
+
+  goToNewIndex: function() {
+    wx.navigateTo({
+      url: '../new-index/new-index',
+    })
   }
 })

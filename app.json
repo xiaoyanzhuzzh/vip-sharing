@@ -1,14 +1,33 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/new-index/new-index",
     "pages/logs/logs",
     "pages/add/add",
     "pages/swiper-show/show"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarBackgroundColor": "#F4ACB7",
+    "navigationBarTitleText": "奔跑吧，会员卡",
+    "navigationBarTextStyle":"#ffffff"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/swiper-show/show",
+        "iconPath": "sources/images/car.png",
+        "selectedIconPath": "sources/images/car.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "sources/images/car.png",
+        "selectedIconPath": "sources/images/car.png"
+      }
+    ]
+  }      
 }

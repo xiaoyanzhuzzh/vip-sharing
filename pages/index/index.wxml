@@ -11,6 +11,7 @@
   <view class="buttons">
     <button class="button" hover-class="other-button-hover" bindtap="addVIPInfo">前往添加VIP信息</button>
     <button class="button" hover-class="other-button-hover" bindtap="showVIPInfo">查看所有VIP信息</button>
+    <button class="button" hover-class="other-button-hover" bindtap="goToNewIndex">新的主页</button>
   </view>
   <view class="tip">
     <text class="tip-title">温馨提示：</text>

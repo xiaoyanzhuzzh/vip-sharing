@@ -1,0 +1,16 @@
+<view>
+  <view class="search">
+    <view class="search-input">
+      <image class="search-icon" src="/sources/images/ath.png" mode="aspectFit" />
+      <input class="search-text" placeholder="搜索商家会员卡" />
+    </view>
+  </view>
+  <view class="big-logo">
+    <block wx:key="{{index}}" wx:for="{{logos}}" wx:for-item="logo">
+      <view class="logo-info">
+        <image style="width:100rpx; height: 100rpx;" src="{{logo.image}}" mode="aspectFit"/>
+        <text class="logo-text">{{logo.title}}</text>
+      </view>
+    </block>
+  </view>
+</view>
