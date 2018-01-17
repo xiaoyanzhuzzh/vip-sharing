@@ -7,7 +7,7 @@
   </view>
   <view class="big-logo">
     <block wx:key="{{index}}" wx:for="{{logos}}" wx:for-item="logo">
-      <view class="logo-info">
+      <view class="logo-info" bindtap="navigateTo">
         <image class="logo-img" src="{{logo.image}}" mode="aspectFit"/>
         <text class="logo-text">{{logo.title}}</text>
       </view>
