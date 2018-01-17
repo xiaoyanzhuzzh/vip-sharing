@@ -8,7 +8,7 @@
   <view class="big-logo">
     <block wx:key="{{index}}" wx:for="{{logos}}" wx:for-item="logo">
       <view class="logo-info">
-        <image style="width:100rpx; height: 100rpx;" src="{{logo.image}}" mode="aspectFit"/>
+        <image class="logo-img" src="{{logo.image}}" mode="aspectFit"/>
         <text class="logo-text">{{logo.title}}</text>
       </view>
     </block>

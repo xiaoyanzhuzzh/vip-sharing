@@ -42,10 +42,15 @@
   border: 1px solid #F4ACB7;
   border-radius: 30rpx;
   padding: 10rpx 30rpx;
-  margin: 20rpx;
-  min-width: 230rpx;
+  margin: 30rpx 40rpx;
+  min-width: 180rpx;
   color: #F4ACB7;
   font-size: 30rpx;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
 }
 
 .logo-text {
