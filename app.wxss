@@ -9,9 +9,7 @@
   box-sizing: border-box;
   background-color: #FFF7F7;
 }
-.show-page {
-  background-color: #FFF7F7;
-}
+
 .page {
   width: 100%;
   height: 100%;
@@ -21,12 +19,14 @@
   font-size: 90rpx;
   color: white;
 }
+
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 10px;
 }
+
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -34,6 +34,7 @@
   border-radius: 50%;
   border: 4rpx solid #FFCAD4;
 }
+
 .userinfo-nickname {
   color: #9D8189;
   font-size: 40rpx;
@@ -41,4 +42,34 @@
 .tips {
   display: block;
   margin: 20rpx 30rpx 100rpx;
+}
+
+.search {
+  background-color: #F4ACB7;
+  padding: 25rpx 25rpx 80rpx;
+  margin-bottom: 60rpx;
+}
+
+.search-input {
+  height: 80rpx;
+  padding: 0 15rpx;
+  background-color: #ffffff; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+}
+
+.search-icon {
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.search-text {
+  margin-left: 10rpx;
+  width: 100%;
+  display: inline-block;
+  font-size: 30rpx;
+  vertical-align: middle;
 }

@@ -1,14 +1,14 @@
-.userinfo {
-  margin: 40rpx auto;
+.swiper-container{
+  padding: 0 30rpx;
 }
+
 .categories {
-  height:36px;
-  width:750rpx;
-  background-color:#F4ACB7;
+  background-color: #F4ACB7;
+  padding: 25rpx 25rpx 80rpx;
   display:flex;
   justify-content:space-around;
-  font-size: 32rpx;
-  font-weight: bold;
+  font-size:32rpx;
+  font-weight:bold;
   color:#ffffff;
 }
 .category {
@@ -28,11 +28,10 @@
   text-align: center;
 }
 .vip-infos{
-  margin:25px auto;
   text-align:center;
 }
 .view-item {
-  background-color: #F7EDF0;
+  border-bottom:1px solid #F7EDF0;
   margin: 5rpx auto;
 }
 .item-info {
