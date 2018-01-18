@@ -49,7 +49,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          swiperHeight: (res.windowHeight - 37)
+          swiperHeight: (res.screenHeight - 37)
         });
       }
     })
