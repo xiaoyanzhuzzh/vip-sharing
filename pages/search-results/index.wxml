@@ -5,4 +5,14 @@
       <input bindconfirm="searchByShopName" class="search-text" placeholder="搜索商家会员卡" value="{{currentShop}}"/>
     </view>
   </view>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:key="{{index}}" wx:for="{{vipResults}}" wx:for-item="vipResult">
+      <swiper-item>
+        <text class="slide-text" width="355" height="150">{{vipResult.shopName}}</text>
+        <text class="slide-text" width="355" height="150">{{vipResult.ownerName}}</text>
+        <text class="slide-text" width="355" height="150">{{vipResult.vipNumber}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
