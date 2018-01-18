@@ -91,8 +91,12 @@ Page({
     membershipData.set('vipCategory', this.data.categories[result.vipCategory].name);
     membershipData.save().then(function (data) {
       that.setData({
-        canSubmit: true
+        canSubmit: false
       });
+      wx.navigateTo({
+        url: '../swiper-show/show',
+      })
+
       console.log('成功');
     }, function (error) {
       console.log('失败');
