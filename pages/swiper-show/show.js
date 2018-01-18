@@ -34,7 +34,7 @@ Page({
     userInfo: {}
   },
   bindtap: function (e) {
-    console.log(e)
+    console.log(e);
     this.setData({
       selectedCategory: e.currentTarget.id
     });

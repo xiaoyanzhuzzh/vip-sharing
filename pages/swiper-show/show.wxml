@@ -12,7 +12,7 @@
   </view>
   <swiper bindchange="bindChange" current='{{selectedCategory}}' style="height:{{swiperHeight}}px">
     <block wx:key="{{index}}" wx:for="{{categories}}">
-      <swiper-item>
+      <swiper-item class="swiper-container">
         <scroll-view class="vip-infos" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
           <view class="view-item">
             <text class="item-info">店名</text>

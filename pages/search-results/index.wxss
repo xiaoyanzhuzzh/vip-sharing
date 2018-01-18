@@ -27,3 +27,46 @@
   font-size: 30rpx;
   vertical-align: middle;
 }
+
+.swiper-container {
+  margin: auto;
+  text-align: center;
+}
+
+.swiper-card {
+  border: 1px solid #F4ACB7;
+  margin: 0 30rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.swiper-card-left, .swiper-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.swiper-card-left {
+  width: 30%;
+}
+
+.swiper-card-right {
+   width: 70%;
+   background-color: #F4ACB7;
+   color: #fff;
+ }
+
+.swiper-text {
+  display: block;
+  margin: 20rpx auto;
+}
+
+.logo-img {
+  height: 100rpx;
+  width: 100rpx;
+}

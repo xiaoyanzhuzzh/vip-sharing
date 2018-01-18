@@ -6,7 +6,13 @@ Page({
     vertical: false,
     autoplay: true,
     interval: 3000,
-    duration: 1200
+    duration: 1200,
+    "餐饮": '../../sources/images/food1.png',
+    "服饰": '../../sources/images/clothes1.png',
+    "娱乐": '../../sources/images/fun1.png',
+    "爱车": '../../sources/images/car1.png',
+    "美容美发": '../../sources/images/hair.png',
+    "其他": '../../sources/images/others1.png'
   },
   onLoad: function (options) {
     var that = this;
@@ -16,6 +22,13 @@ Page({
         currentShop: options.shopName
       })
     });
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          swiperHeight: (res.windowHeight - 288)
+        });
+      }
+    });
   },
   onShow: function () {
     var that = this;
@@ -23,7 +36,9 @@ Page({
     membershipQuery.contains('shopName', this.data.currentShop);
     membershipQuery.find().then(function (results) {
       var attributes = results.map(function (result) {
-        return result.attributes;
+        var vipInfo = result.attributes;
+        vipInfo.image = that.data[vipInfo.vipCategory];
+        return vipInfo;
       });
       that.setData({
         vipResults: attributes

@@ -38,3 +38,7 @@
   color: #9D8189;
   font-size: 40rpx;
 }
+.tips {
+  display: block;
+  margin: 20rpx 30rpx 100rpx;
+}
