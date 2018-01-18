@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/new-index/new-index",
+    "pages/search-results/index",
     "pages/logs/logs",
     "pages/add/add",
     "pages/swiper-show/show"

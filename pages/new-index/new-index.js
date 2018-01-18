@@ -36,6 +36,12 @@ Page({
       })
     })
   },
+  searchByShopName: function (e) {
+    var inputValue = e.detail.value;
+    wx.navigateTo({
+      url: `../search-results/index?shopName=${inputValue}`
+    });
+  },
   navigateTo: function () {
     wx.navigateTo({
       url: '../swiper-show/show'
