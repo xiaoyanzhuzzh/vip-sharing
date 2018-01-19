@@ -1,32 +1,57 @@
-.usermotto {
-  margin: 20rpx 40rpx;
-  line-height: 1.5;
-  font-size: 28rpx;
-  padding: 10rpx;
-  color: #330505
+.big-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.user-motto {
+.logo-info {
+  text-align:center;
+  padding:60rpx 120rpx;
+  margin:3rpx;
+  color:#fff;
+  font-size:30rpx;
+  background-color:#E54E90;
+}
+
+.logo-info:nth-child(2) {
+  background: #FF79B7;
+}
+.logo-info:nth-child(3) {
+  background: #FF79B7;
+}
+.logo-info:nth-child(6) {
+  background: #FF79B7;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
+}
+
+.logo-text {
   display: block;
-  text-align: center;
 }
 
-.buttons {
+.share-logo-container {
+  margin: auto;
+}
+
+.share-logo {
   width: 100%;
-  margin: 100rpx auto 50rpx;
 }
 
-.button {
-  background-color: #F4ACB7;
-  color: #ffffff;
-  width: 80%;
-  font-size: 30rpx;
-  font-weight: bold;
-  margin: 20rpx auto;
+@media screen and (max-width: 400px) {
+  .share-logo {
+    height: 100%;
+    min-height: 205px;
+  }
 }
-.tip {
-  margin: 40rpx;
-  font-size: 20rpx;
-  color: #838384;
-  line-height: 1.5;
+@media screen and (max-width: 350px) {
+  .share-logo {
+    height: 100%;
+    min-height: 180px;
+  }
 }

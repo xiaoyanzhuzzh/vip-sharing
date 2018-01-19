@@ -7,6 +7,7 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1200,
+    circular: true,
     "餐饮": '../../sources/images/food1.png',
     "服饰": '../../sources/images/clothes1.png',
     "娱乐": '../../sources/images/fun1.png',

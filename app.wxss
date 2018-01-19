@@ -45,9 +45,9 @@
 }
 
 .search {
-  background-color: #F4ACB7;
+  background:linear-gradient(0deg, #E54E90 0%, #FF79B7 100%);
   padding: 25rpx 25rpx 80rpx;
-  margin-bottom: 60rpx;
+  margin-bottom: 20rpx;
 }
 
 .search-input {

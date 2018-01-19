@@ -27,7 +27,14 @@ Page({
       that.setData({
         userInfo: userInfo
       })
-    })
+    });
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          formWidth: (res.windowWidth - 15)
+        });
+      }
+    });
   },
 
   onShow: function (){
