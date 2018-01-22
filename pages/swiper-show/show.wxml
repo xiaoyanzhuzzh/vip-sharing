@@ -1,7 +1,7 @@
 <view class="container">
   <view class="swiper-header">
     <block wx:key="{{index}}" wx:for="{{categories}}" wx:for-item="category">
-      <view id="{{index}}" bindtap="bindtap" class="swipper-title {{index==selectedCategory ? 'category-selected' : ''}}">
+      <view id="{{index}}" bindtap="bindtap" class="swipper-title {{index == selectedCategory ? 'category-selected' : ''}}">
         {{category.name}}
       </view>
     </block>

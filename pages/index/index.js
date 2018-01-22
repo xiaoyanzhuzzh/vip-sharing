@@ -4,27 +4,33 @@ Page({
     logos: [
       {
         image: '../../sources/images/food1.png',
-        title: '餐饮美食卡'
+        title: '餐饮美食卡',
+        name: '餐饮', 
       },
       {
         image: '../../sources/images/clothes1.png',
-        title: '服装卡'
+        title: '服饰卡',
+        name: '服饰'
       },
       {
         image: '../../sources/images/car1.png',
-        title: '爱车卡'
+        title: '爱车卡',
+        name: '爱车'
       },
       {
         image: '../../sources/images/hair.png',
-        title: '美容美发卡'
+        title: '美容美发卡',
+        name: '美容美发'
       },
       {
         image: '../../sources/images/fun1.png',
-        title: '生活娱乐卡'
+        title: '生活娱乐卡',
+        name: '娱乐'
       },
       {
         image: '../../sources/images/others1.png',
-        title: '其他卡'
+        title: '其它卡',
+        name: '其它'
       }
     ]
   },

@@ -34,7 +34,6 @@ Page({
     userInfo: {}
   },
   bindtap: function (e) {
-    console.log(e);
     this.setData({
       selectedCategory: e.currentTarget.id
     });
@@ -61,16 +60,42 @@ Page({
         userInfo: userInfo
       })
     });
-
     var membershipQuery = new AV.Query('Membership');
     membershipQuery.find().then(function (data) {
       that.setData({
         VIPInfos: data
       });
     });
-    console.log(options, 'options')
+    var currentIndex = that.data.categories.findIndex(function(category, index) {
+      return options.category == category.name;
+    });
     that.setData({
-      selectedCategory: options.category
+<<<<<<< HEAD:pages/swiper-show/show.js
+      selectedCategory: currentIndex
     })
+=======
+      selectedCategory: currentIndex >= 0 ? currentIndex : 0
+    });
+  },
+  onReady: function () {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          swiperHeight: res.screenHeight
+        });
+      }
+    });
+  },
+  bindtap: function (e) {
+    this.setData({
+      selectedCategory: e.currentTarget.id
+    });
+  },
+  bindChange: function (e) {
+    this.setData({
+      selectedCategory: e.detail.current
+    });
+>>>>>>> ae6d0d7... m:pages/swiper-show/index.js
   }
 });
