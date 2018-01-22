@@ -1,11 +1,12 @@
-<view>
-  <view class="search">
+<view class="container">
+  <view class="container-header">
     <view class="search-input">
       <image class="search-icon" src="/sources/images/ath.png" mode="aspectFit" />
       <input bindconfirm="searchByShopName" class="search-text" placeholder="搜索商家会员卡" value="{{currentShop}}"/>
     </view>
   </view>
-  <text class="tips">搜索到{{vipResults.length}}条关于“{{currentShop}}”的会员卡信息</text>
+  <view class="container-body">
+    <text class="tips">搜索到{{vipResults.length}}条关于“{{currentShop}}”的会员卡信息</text>
   <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" style="height:{{swiperHeight}}px" circular="{{circular}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:key="{{index}}" wx:for="{{vipResults}}" wx:for-item="vipResult">
@@ -24,4 +25,5 @@
       </swiper-item>
     </block>
   </swiper>
+  </view>
 </view>

@@ -8,8 +8,28 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#FF79B7",
+    "navigationBarBackgroundColor": "#E67985",
     "navigationBarTitleText": "奔跑吧，会员卡",
     "navigationBarTextStyle":"#ffffff"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#E67985",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "sources/images/home.png",
+        "text": "首页",
+        "selectedIconPath": "sources/images/home-hl.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "iconPath": "sources/images/new.png",
+        "text": "分享你的会员卡",
+        "selectedIconPath": "sources/images/new-hl.png"
+      }
+    ]
   }
 }

@@ -4,7 +4,7 @@
 }
 
 .swiper-card {
-  border: 1px solid #FF79B7;
+  border: 1px solid #E67985;
   margin: 0 30rpx;
   vertical-align: middle;
   display: flex;
@@ -22,7 +22,7 @@
 
 .swiper-card-left {
   width: 30%;
-  background-color:#E54E90;
+  background-color: #E54E90;
   color:#fff;
 }
 

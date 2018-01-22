@@ -1,19 +1,18 @@
-<view>
-  <view class="search">
+<view class="container">
+  <view class="search container-header">
     <view class="search-input">
       <image class="search-icon" src="/sources/images/ath.png" mode="aspectFit" />
       <input bindconfirm="searchByShopName" class="search-text" placeholder="搜索商家会员卡" />
     </view>
   </view>
-  <view class="big-logo">
+  <view class="big-logo container-body">
     <block wx:key="{{index}}" wx:for="{{logos}}" wx:for-item="logo">
-      <view class="logo-info" bindtap="navigateTo">
-        <image class="logo-img" src="{{logo.image}}" mode="aspectFit"/>
-        <text class="logo-text">{{logo.title}}</text>
-      </view>
+      <navigator url="../swiper-show/show?category={{logo.title}}" open-type="redirect" hover-class="other-navigator-hover">
+        <view class="logo-info">
+          <image class="logo-img logo-img-{{index}}" src="{{logo.image}}" mode="aspectFit"/>
+          <text class="logo-text">{{logo.title}}</text>
+        </view>
+      </navigator>
     </block>
-  </view>
-  <view class="share-logo-container" style="width:{{shareImageWidth}}px;height:{{shareImageHeight}}px" bindtap="navigateToAddPage">
-    <image class="share-logo" src="/sources/images/crddsn.png" mode="aspectFit"/>
   </view>
 </view>

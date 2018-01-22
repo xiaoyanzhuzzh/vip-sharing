@@ -1,0 +1,32 @@
+.usermotto {
+  margin: 20rpx 40rpx;
+  line-height: 1.5;
+  font-size: 28rpx;
+  padding: 10rpx;
+  color: #330505
+}
+
+.user-motto {
+  display: block;
+  text-align: center;
+}
+
+.buttons {
+  width: 100%;
+  margin: 100rpx auto 50rpx;
+}
+
+.button {
+  background-color: #F4ACB7;
+  color: #ffffff;
+  width: 80%;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin: 20rpx auto;
+}
+.tip {
+  margin: 40rpx;
+  font-size: 20rpx;
+  color: #838384;
+  line-height: 1.5;
+}

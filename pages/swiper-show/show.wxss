@@ -1,9 +1,8 @@
 .swiper-container{
   padding: 0 30rpx;
 }
-
-.categories {
-  background:linear-gradient(0deg, #E54E90 0%, #FF79B7 100%);
+.swiper-header {
+  background: #E67985;
   padding: 25rpx 25rpx 80rpx;
   display:flex;
   justify-content:space-around;
@@ -11,7 +10,7 @@
   font-weight:bold;
   color:#ffffff;
 }
-.category {
+.swipper-title {
   padding:0 20rpx;
   display: flex;
   align-items: center;

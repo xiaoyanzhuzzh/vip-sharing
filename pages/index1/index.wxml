@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{mottoSubtitle}}</text>
+  </view>
+  <view class="buttons">
+    <button class="button" hover-class="other-button-hover" bindtap="addVIPInfo">前往添加VIP信息</button>
+    <button class="button" hover-class="other-button-hover" bindtap="showVIPInfo">查看所有VIP信息</button>
+    <button class="button" hover-class="other-button-hover" bindtap="goToNewIndex">新的主页</button>
+  </view>
+  <view class="tip">
+    <text class="tip-title">温馨提示：</text>
+    <text class="tip-content">请大家慎重选择可以分享的VIP卡，我们对于重要信息的泄露不承担任何的法律责任，谢谢合作。</text>
+  </view>
+</view>

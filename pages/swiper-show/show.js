@@ -54,7 +54,7 @@ Page({
       }
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
     var that = this;
     app.getUserInfo(function (userInfo) {
       that.setData({
@@ -68,5 +68,9 @@ Page({
         VIPInfos: data
       });
     });
+    console.log(options, 'options')
+    that.setData({
+      selectedCategory: options.category
+    })
   }
-})
+});

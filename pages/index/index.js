@@ -49,15 +49,5 @@ Page({
     wx.navigateTo({
       url: `../search-results/index?shopName=${inputValue}`
     });
-  },
-  navigateTo: function () {
-    wx.navigateTo({
-      url: '../swiper-show/show'
-    });
-  },
-  navigateToAddPage: function() {
-    wx.navigateTo({
-      url: '../add/add'
-    }); 
   }
 });
