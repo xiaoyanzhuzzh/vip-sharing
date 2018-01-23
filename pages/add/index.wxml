@@ -7,19 +7,19 @@
     <view class="section">
       <view class="section-title">店名</view>
       <view class="section-content">
-          <input focus="{{isFocus[0]}}" placeholder="xxx" placeholder-class="title-placeholder" name="shopName"/>
+        <input focus="{{isFocus[0]}}" placeholder="xxx" placeholder-class="title-placeholder" name="shopName"/>
       </view>
     </view>
     <view class="section">
       <view class="section-title">持卡人</view>
       <view class="section-content">
-          <input focus="{{isFocus[1]}}" placeholder="张三" placeholder-class="title-placeholder" name="ownerName"/>
+        <input focus="{{isFocus[1]}}" placeholder="张三" placeholder-class="title-placeholder" name="ownerName"/>
       </view>
     </view>
     <view class="section">
       <view class="section-title">卡号/电话</view>
       <view class="section-content">
-          <input focus="{{isFocus[2]}}" placeholder="123456789" placeholder-class="title-placeholder" name="vipNumber"/>
+        <input focus="{{isFocus[2]}}" placeholder="123456789" placeholder-class="title-placeholder" name="vipNumber"/>
       </view>
     </view>
     <view class="section">

@@ -6,7 +6,6 @@
   align-items: center;
   align-content: center;
 }
-
 .logo-info {
   text-align: center;
   padding: 70rpx 90rpx;
@@ -55,15 +54,12 @@
   display: block;
   color: #6D6E6D;
 }
-
 .share-logo-container {
   margin: auto;
 }
-
 .share-logo {
   width: 100%;
 }
-
 @media screen and (max-width: 400px) {
   .share-logo {
     height: 100%;

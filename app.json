@@ -2,8 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/search-results/index",
-    "pages/add/add",
-    "pages/swiper-show/show"
+    "pages/add/index",
+    "pages/swiper-show/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -24,7 +24,7 @@
         "selectedIconPath": "sources/images/home-hl.png"
       },
       {
-        "pagePath": "pages/add/add",
+        "pagePath": "pages/add/index",
         "iconPath": "sources/images/new.png",
         "text": "分享你的会员卡",
         "selectedIconPath": "sources/images/new-hl.png"

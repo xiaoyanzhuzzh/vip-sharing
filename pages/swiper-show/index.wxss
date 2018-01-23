@@ -4,14 +4,14 @@
 .swiper-header {
   background: #E67985;
   padding: 25rpx 25rpx 80rpx;
-  display:flex;
-  justify-content:space-around;
-  font-size:32rpx;
-  font-weight:bold;
-  color:#ffffff;
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
 }
 .swipper-title {
-  padding:0 20rpx;
+  padding: 0 20rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,10 +27,10 @@
   text-align: center;
 }
 .vip-infos{
-  text-align:center;
+  text-align: center;
 }
 .view-item {
-  border-bottom:1px solid #F7EDF0;
+  border-bottom: 1px solid #F7EDF0;
   margin: 5rpx auto;
 }
 .item-info {
@@ -42,8 +42,8 @@
   font-size: 30rpx;
   width: 150rpx;
   display: inline-block;
-  color:#330505;
-  text-align:left;
+  color: #330505;
+  text-align: left;
 }
 .item-number-info {
   width: 250rpx;

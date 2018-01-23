@@ -7,7 +7,7 @@
   </view>
   <view class="big-logo container-body">
     <block wx:key="{{index}}" wx:for="{{logos}}" wx:for-item="logo">
-      <navigator url="../swiper-show/show?category={{logo.name}}" open-type="redirect" hover-class="other-navigator-hover">
+      <navigator url="../swiper-show/index?category={{logo.name}}" open-type="redirect" hover-class="other-navigator-hover">
         <view class="logo-info logo-info-{{index}}">
           <image class="logo-img logo-img-{{index}}" src="{{logo.image}}" mode="aspectFit"/>
           <text class="logo-text">{{logo.title}}</text>

@@ -1,4 +1,3 @@
-// show.js
 const AV = require('../../lib/av-weapp-min.js');
 var app = getApp();
 Page({
@@ -33,26 +32,6 @@ Page({
     selectedCategory: "0",
     userInfo: {}
   },
-  bindtap: function (e) {
-    this.setData({
-      selectedCategory: e.currentTarget.id
-    });
-  },
-  bindChange: function (e) {
-    this.setData({
-      selectedCategory: e.detail.current
-    })
-  },
-  onReady: function () {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          swiperHeight: (res.screenHeight - 37)
-        });
-      }
-    })
-  },
   onLoad: function (options) {
     var that = this;
     app.getUserInfo(function (userInfo) {
@@ -70,10 +49,6 @@ Page({
       return options.category == category.name;
     });
     that.setData({
-<<<<<<< HEAD:pages/swiper-show/show.js
-      selectedCategory: currentIndex
-    })
-=======
       selectedCategory: currentIndex >= 0 ? currentIndex : 0
     });
   },
@@ -96,6 +71,5 @@ Page({
     this.setData({
       selectedCategory: e.detail.current
     });
->>>>>>> ae6d0d7... m:pages/swiper-show/index.js
   }
 });
