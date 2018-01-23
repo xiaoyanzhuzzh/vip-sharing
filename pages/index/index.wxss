@@ -16,11 +16,10 @@
   border-top-width: 0;
   max-width: 180rpx;
 }
-
-.logo-info:nth-child(2n) {
+.logo-info-1, .logo-info-3, .logo-info-5 {
   border-right-width: 0;
 }
-.logo-info:nth-child(2n+1) {
+.logo-info-0, .logo-info-2, .logo-info-4 {
   border-left-width: 0;
 }
 .logo-img {

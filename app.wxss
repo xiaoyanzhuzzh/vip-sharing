@@ -23,6 +23,7 @@ page {
   margin-bottom: 20rpx;
 }
 .container-body {
+  border-radius: 25rpx; 
   position: absolute;  
   top: 115rpx;
   background-color: #fff;
@@ -38,7 +39,6 @@ page {
   align-items: center;
   padding-bottom: 10px;
 }
-
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -46,7 +46,6 @@ page {
   border-radius: 50%;
   border: 4rpx solid #E67985;
 }
-
 .userinfo-nickname {
   color: #9D8189;
   font-size: 40rpx;
@@ -55,7 +54,6 @@ page {
   display: block;
   margin: 20rpx 30rpx 100rpx;
 }
-
 .search-input {
   height: 80rpx;
   padding: 0 15rpx;

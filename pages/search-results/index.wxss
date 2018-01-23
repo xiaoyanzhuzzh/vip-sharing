@@ -4,7 +4,6 @@
 }
 
 .swiper-card {
-  border: 1px solid #E67985;
   margin: 0 30rpx;
   vertical-align: middle;
   display: flex;
@@ -21,14 +20,15 @@
 }
 
 .swiper-card-left {
-  width: 30%;
-  background-color: #E54E90;
+  width: 40%;
+  background-color: #E67985;
   color:#fff;
 }
 
 .swiper-card-right {
    width: 70%;
-   color: #E54E90;
+   color: #E67985;
+   border: 1px solid #E67985;
  }
 
 .swiper-text {
