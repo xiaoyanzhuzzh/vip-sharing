@@ -26,7 +26,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          formWidth: (res.windowWidth - 15)
+          formWidth: (res.windowWidth - 30)
         });
       }
     });

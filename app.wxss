@@ -11,9 +11,9 @@
 page {
   background-color: #F5EBEB;
 }
-.container {
-  /* position: relative; */
-}
+ .container {
+  position: relative; 
+} 
 .container-header {
   background: #E67985;
   padding: 25rpx 25rpx 180rpx;
@@ -27,7 +27,7 @@ page {
   position: absolute;  
   top: 115rpx;
   background-color: #fff;
-  margin: 80rpx 60rpx 40rpx;
+  margin: 80rpx 60rpx 40rpx; 
 }
 .container-footer {
   position: absolute;    

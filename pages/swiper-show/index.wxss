@@ -30,17 +30,19 @@
   text-align: center;
 }
 .view-item {
-  border-bottom: 1px solid #F7EDF0;
+  border-bottom: 1px solid #F0F8F0;
   margin: 5rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .item-info {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  margin: auto;
   padding: 20rpx 20rpx;
   vertical-align: middle;
   font-size: 30rpx;
-  width: 150rpx;
+  width: 160rpx; 
   display: inline-block;
   color: #330505;
   text-align: left;

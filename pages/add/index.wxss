@@ -7,7 +7,6 @@
   color: #330505;
   padding: 15rpx 0rpx;
   font-size: 30rpx;
-
 }
 .section-title {
   display: inline-block;

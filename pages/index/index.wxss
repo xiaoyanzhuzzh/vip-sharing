@@ -15,6 +15,11 @@
   border-top-width: 0;
   max-width: 180rpx;
 }
+@media screen and (max-height: 500px) {
+  .logo-info {
+    padding: 50rpx 90rpx;
+  }
+}
 .logo-info-1, .logo-info-3, .logo-info-5 {
   border-right-width: 0;
 }
