@@ -11,7 +11,7 @@
       <swiper-item>
         <scroll-view class="vip-infos" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
           <view class="view-item" wx:key="{{index}}" wx:for="{{VIPInfos}}" wx:for-item="VIPInfo"  wx:if="{{item.name == VIPInfo.vipCategory}}">
-            <text class="item-info">{{VIPInfo.shopName}}</text>
+            <text class="item-info item-shop-info">{{VIPInfo.shopName}}</text>
             <text class="item-info">{{VIPInfo.ownerName}}</text>
             <text class="item-info item-number-info">{{VIPInfo.vipNumber}}</text>
           </view>

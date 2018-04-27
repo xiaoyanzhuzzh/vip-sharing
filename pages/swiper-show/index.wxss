@@ -3,7 +3,7 @@
 }
 .swiper-header {
   background: #E67985;
-  padding: 25rpx 25rpx 80rpx;
+  padding: 25rpx;
   display: flex;
   justify-content: space-around;
   font-size: 32rpx;
@@ -33,20 +33,20 @@
   border-bottom: 1px solid #F0F8F0;
   margin: 5rpx auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
 }
 .item-info {
-  margin: auto;
   padding: 20rpx 20rpx;
-  vertical-align: middle;
   font-size: 30rpx;
-  width: 160rpx; 
-  display: inline-block;
   color: #330505;
+}
+.item-shop-info {
+  width: 200rpx;
   text-align: left;
 }
 .item-number-info {
   width: 250rpx;
+  text-align: right;
 }
