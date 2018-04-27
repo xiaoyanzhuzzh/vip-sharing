@@ -5,25 +5,20 @@
       <input bindconfirm="searchByShopName" class="search-text" placeholder="搜索商家会员卡" value="{{currentShop}}"/>
     </view>
   </view>
-  <view class="container-body">
+  <view class="container-body search-results">
     <text class="tips">搜索到{{vipResults.length}}条关于“{{currentShop}}”的会员卡信息</text>
-  <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" style="height:{{swiperHeight}}px" circular="{{circular}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:key="{{index}}" wx:for="{{vipResults}}" wx:for-item="vipResult">
-      <swiper-item>
-        <view class="swiper-card">
-          <view class="swiper-card-left">
-            <image class="logo-img" src="{{vipResult.image}}" mode="aspectFit"/>
-            <text class="swiper-text">{{vipResult.vipCategory}}</text>
-          </view>
-          <view class="swiper-card-right">
-            <text class="swiper-text" width="355" height="150">{{vipResult.shopName}}</text>
-            <text class="swiper-text" width="355" height="150">{{vipResult.ownerName}}</text>
-            <text class="swiper-text" width="355" height="150">{{vipResult.vipNumber}}</text>
-          </view>
-        </view>
-      </swiper-item>
-    </block>
-  </swiper>
+  <block wx:key="{{index}}" wx:for="{{vipResults}}" wx:for-item="vipResult">
+    <view class="vip-card">
+      <view class="vip-card-left">
+        <image class="logo-img" src="{{vipResult.image}}" mode="aspectFit"/>
+        <text class="vip-card-text">{{vipResult.vipCategory}}</text>
+      </view>
+      <view class="vip-card-right">
+        <text class="vip-card-text" width="355" height="150">{{vipResult.shopName}}</text>
+        <text class="vip-card-text" width="355" height="150">{{vipResult.ownerName}}</text>
+        <text class="vip-card-text" width="355" height="150">{{vipResult.vipNumber}}</text>
+      </view>
+    </view>
+  </block>
   </view>
 </view>

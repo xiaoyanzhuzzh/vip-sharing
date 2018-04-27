@@ -11,7 +11,7 @@
 page {
   background-color: #F5EBEB;
 }
- .container {
+.container {
   position: relative; 
 } 
 .container-header {
@@ -27,7 +27,9 @@ page {
   position: absolute;  
   top: 115rpx;
   background-color: #fff;
-  margin: 80rpx 60rpx 40rpx; 
+  margin: 80rpx 60rpx 0rpx; 
+  left: 0;
+  right: 0;
 }
 .container-footer {
   position: absolute;    
@@ -52,7 +54,8 @@ page {
 }
 .tips {
   display: block;
-  margin: 20rpx 30rpx 100rpx;
+  margin: 30rpx 10rpx 50rpx;
+  font-size: 35rpx;
 }
 .search-input {
   height: 80rpx;
@@ -64,12 +67,10 @@ page {
   border-radius: 15rpx;
   box-sizing: border-box;
 }
-
 .search-icon {
 	width: 30rpx;
 	height: 30rpx;
 }
-
 .search-text {
   margin-left: 10rpx;
   width: 100%;
